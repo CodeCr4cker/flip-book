@@ -1,16 +1,13 @@
-const envelope = document.querySelector('.envelope');
-const heartSeal = document.querySelector('.heart-seal');
-let timeoutId;
-
-envelope.addEventListener('mouseover', () => {
-    clearTimeout(timeoutId);
-    heartSeal.style.opacity = 0;
-});
-
-envelope.addEventListener('mouseout', () => {
-    timeoutId = setTimeout(() => {
-        heartSeal.style.opacity = 1;
-    }, 1500); 
-});
-
-heartSeal.style.transition = 'opacity 0.3s ease';
+const flipBook = (elBook) => {
+    elBook.style.setProperty("--c", 0); // Set current page
+    elBook.querySelectorAll(".page").forEach((page, idx) => {
+      page.style.setProperty("--i", idx);
+      page.addEventListener("click", (evt) => {
+        if (evt.target.closest("a")) return;
+        const curr = evt.target.closest(".back") ? idx : idx + 1;
+        elBook.style.setProperty("--c", curr);
+      });
+    });
+  };
+  
+  document.querySelectorAll(".book").forEach(flipBook);
