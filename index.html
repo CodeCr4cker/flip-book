@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>FlipBook - Coderstar</title>
 <style>
-
     /* FlipBook Neno Style */
     .bookk, .bookk * {
       box-sizing: border-box;
@@ -71,7 +70,6 @@
       rotate: 0 1 0 180deg;
     }
 
-    /* Cover and Page Styles */
     .cover {
       background: radial-gradient(circle at 80% 20%, #00f2 0%, #002 100%),
                   url("https://picsum.photos/id/984/800/900") center / cover no-repeat;
@@ -135,98 +133,132 @@
       background: linear-gradient(to right, #111, #222);
       border-radius: 0.5em 0.1em 0.1em 0.5em;
     }
-  </style>
+
+    /* ↓↓↓ Tighter spacing between headings and paragraphs ↓↓↓ */
+    .front h1, .front h2,
+    .back h1, .back h2 {
+      margin-bottom: 0.05em;
+    }
+
+    .front p, .back p {
+      margin-top: 0.05em;
+    }
+
+    /* ↓↓↓ Responsive font and layout for small screens ↓↓↓ */
+    @media (max-width: 768px) {
+      .page {
+        font-size: 1.3cqmin;
+      }
+
+      .book {
+        width: 80vw;
+        rotate: 1 0 0 15deg;
+      }
+
+      .front,
+      .back {
+        padding: 1em;
+      }
+
+      .front::after,
+      .back::after {
+        font-size: 0.6em;
+      }
+    }
+</style>
 </head>
 <body>
   <div class="bookk">
-  <div class="book">
-    <div class="page">
-      <div class="front cover">
-        <h1>About me</h1>
-        <p>2025.<br />Divyanshu Pandey</p>
+    <div class="book">
+      <div class="page">
+        <div class="front cover">
+          <h1>About me</h1>
+          <p>2025.<br />Divyanshu Pandey</p>
+        </div>
+        <div class="back">
+          <h2>index</h2>
+          <p>my introduction</p>
+          <p>Why I Code 💻</p>
+          <p>What I Know 🧠</p>
+          <p>My Vision 🚀</p>
+          <p>Let’s Connect! 🤝</p>
+          <p>Learning Philosophy</p>
+          <p>Thank You for Being Here 🙏</p>
+        </div>
       </div>
-      <div class="back">
-        <h2>index</h2>
-        <p>my introduction</p>
-        <p>Why I Code 💻</p>
-        <p>What I Know 🧠</p>
-        <p>My Vision 🚀</p>
-        <p>Let’s Connect! 🤝</p>
-        <p>Learning Philosophy</p>
-        <p>Thank You for Being Here 🙏</p>
-      </div>
-    </div>
 
-    <div class="page">
-      <div class="front">
-        <h2>my introduction</h2>
-        <p>
-          I’m a 12<sup>th</sup> standard student who’s deeply passionate about coding and creativity.
-          My journey in tech started with curiosity and grew into a strong desire to build, solve, and innovate. 
-          I love spending time exploring new web technologies and turning ideas into interactive digital experiences. 
-        </p>
+      <div class="page">
+        <div class="front">
+          <h2>my introduction</h2>
+          <p>
+            I’m a 12<sup>th</sup> standard student who’s deeply passionate about coding and creativity.
+            My journey in tech started with curiosity and grew into a strong desire to build, solve, and innovate. 
+            I love spending time exploring new web technologies and turning ideas into interactive digital experiences. 
+          </p>
+        </div>
+        <div class="back">
+          <img src="https://picsum.photos/id/24/600/600" alt="Img 1" />
+        </div>
       </div>
-      <div class="back">
-        <img src="https://picsum.photos/id/24/600/600" alt="Img 1" />
-      </div>
-    </div>
 
-    <div class="page">
-      <div class="front">
-        <h2>Why I Code 💻</h2>
-        <p>
-          For me, coding is not just about writing lines of code—it's about building a bridge between imagination and reality. 
-          Whether it’s a portfolio website, a flipbook animation, or a full-fledged chat app, I enjoy every part of the process—from designing UI to writing functional backend logic.
-        </p>
+      <div class="page">
+        <div class="front">
+          <h2>Why I Code 💻</h2>
+          <p>
+            For me, coding is not just about writing lines of code—it's about building a bridge between imagination and reality. 
+            Whether it’s a portfolio website, a flipbook animation, or a full-fledged chat app, I enjoy every part of the process—from designing UI to writing functional backend logic.
+          </p>
+        </div>
+        <div class="back">
+          <h2>What I Know 🧠</h2>
+          <p>
+            I have hands-on experience in HTML, CSS, JavaScript, Firebase, and responsive UI design. 
+            I’ve built projects that include animated portfolios, flipbook-style interfaces, chat apps with real-time features, and creative tools that reflect my interest in design and interactivity.
+          </p>
+        </div>
       </div>
-      <div class="back">
-        <h2>What I Know 🧠</h2>
-        <p>
-          I have hands-on experience in HTML, CSS, JavaScript, Firebase, and responsive UI design. 
-          I’ve built projects that include animated portfolios, flipbook-style interfaces, chat apps with real-time features, and creative tools that reflect my interest in design and interactivity.
-        </p>
-      </div>
-    </div>
 
-    <div class="page">
-      <div class="front">
-        <h2>My Vision 🚀</h2>
-        <p>
-          My goal is to become a full-stack developer and explore fields like cybersecurity, artificial intelligence, and ethical hacking. 
-          I believe technology can change the world—and I want to be part of that change. I constantly challenge myself to learn more, build better, and keep growing.
-        </p>
+      <div class="page">
+        <div class="front">
+          <h2>My Vision 🚀</h2>
+          <p>
+            My goal is to become a full-stack developer and explore fields like cybersecurity, artificial intelligence, and ethical hacking. 
+            I believe technology can change the world—and I want to be part of that change. I constantly challenge myself to learn more, build better, and keep growing.
+          </p>
+        </div>
+        <div class="back">
+          <h2>Let’s Connect! 🤝</h2>
+          <p>
+            I love collaborating with other developers, learning from others, and contributing to fun, meaningful projects.
+            If you're someone who shares a love for tech, design, or innovation, let’s connect and build something amazing together!
+          </p>
+        </div>
       </div>
-      <div class="back">
-        <h2>Let’s Connect! 🤝</h2>
-        <p>
-          I love collaborating with other developers, learning from others, and contributing to fun, meaningful projects.
-          If you're someone who shares a love for tech, design, or innovation, let’s connect and build something amazing together!
-        </p>
-      </div>
-    </div>
 
-    <div class="page">
-      <div class="front">
-        <h2>Learning Philosophy</h2>
-        <p>
-          I believe in learning by doing. I don't wait for the perfect time or course—I dive into projects, break things, fix them, and learn along the way.
+      <div class="page">
+        <div class="front">
+          <h2>Learning Philosophy</h2>
+          <p>
+            I believe in learning by doing. I don't wait for the perfect time or course—I dive into projects, break things, fix them, and learn along the way.
+          </p>
+        </div>
+        <div class="back">
+          <h2>Thank You for Being Here 🙏</h2>
+          <p>
+            Your time means a lot to me. Feel free to explore my projects, drop a message, or give feedback. 
+            Every interaction helps me improve and grow.
+          </p>
+        </div>
       </div>
-      <div class="back">
-        <h2>Thank You for Being Here 🙏</h2>
-        <p>
-          Your time means a lot to me. Feel free to explore my projects, drop a message, or give feedback. 
-          Every interaction helps me improve and grow.
-        </p>
-      </div>
-    </div>
 
-    <div class="page">
-      <div class="front">
-        <img src="https://picsum.photos/id/1073/600/600" alt="Img 2" />
+      <div class="page">
+        <div class="front">
+          <img src="https://picsum.photos/id/1073/600/600" alt="Img 2" />
+        </div>
+        <div class="back cover"></div>
       </div>
-      <div class="back cover"></div>
     </div>
-  </div> </div>
+  </div>
 
   <script>
     const flipBook = (elBook) => {
